@@ -1,0 +1,60 @@
+:root{--blue:#1859b8;--ink:#162033;--muted:#667085;--bg:#f3f7fb;--card:#fff;--green:#dff2e9;--yellow:#fff5cc;--violet:#e8e4ff;--line:#dce6f3;--shadow:0 10px 26px rgba(20,45,80,.11);--radius:8px;--mobile:460px}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{width:100%;max-width:var(--mobile);min-height:100svh;margin:0 auto;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;padding-bottom:calc(86px + env(safe-area-inset-bottom));overflow-x:hidden}
+img,svg,video{max-width:100%;height:auto}
+a,button{font:inherit}
+.top{width:100%;padding:calc(18px + env(safe-area-inset-top)) 16px 18px;text-align:center;background:linear-gradient(180deg,#fff,#eaf3ff);border-bottom:1px solid #dce8f8}
+.logo{width:min(330px,86vw);height:auto;margin:0 auto 12px;display:block}
+.top h1{margin:0;font-size:clamp(31px,9vw,40px);line-height:1.04;font-weight:950;letter-spacing:0;overflow-wrap:anywhere}
+.top p{margin:7px 0 0;color:var(--muted);font-weight:700}
+.app{width:100%;max-width:var(--mobile);margin:0 auto;padding:12px}
+.flight-card,.info-card,.course-card,.shared-card{width:100%;background:var(--card);border:1px solid rgba(24,89,184,.1);border-radius:var(--radius);box-shadow:var(--shadow);margin:0 auto 12px;overflow:hidden}
+.flight-card{background:var(--green);padding:14px}
+.flight-row{display:grid;grid-template-columns:1fr;align-items:center;gap:8px;text-align:center}
+.flight-row>div:not(.plane){background:rgba(255,255,255,.58);border:1px solid rgba(255,255,255,.65);border-radius:var(--radius);padding:12px 10px}
+.flight-row span,.section-head span{display:block;text-transform:uppercase;letter-spacing:.06em;font-size:12px;font-weight:900;color:var(--blue)}
+.flight-row strong{display:block;font-size:22px;margin:5px 0 3px;overflow-wrap:anywhere}
+.flight-row small{display:block;font-size:13px;font-weight:800;color:#344054;overflow-wrap:anywhere}
+.plane{display:none}
+.section{padding-top:8px}
+.section-head{margin:8px 2px 12px;text-align:center}
+.section-head.compact{margin-top:16px}
+.section-head h2{font-size:24px;margin:2px 0 0;letter-spacing:0}
+.course-button{width:100%;border:0;background:#fff;text-align:left;padding:16px;display:grid;grid-template-columns:minmax(0,1fr) 34px;gap:10px;align-items:center;color:var(--ink)}
+.course-button h3{margin:0;font-size:clamp(18px,5.1vw,20px);line-height:1.16;letter-spacing:0;overflow-wrap:anywhere}
+.course-button p{margin:7px 0 0;color:var(--muted);font-weight:700;line-height:1.32;overflow-wrap:anywhere}
+.chev{width:32px;height:32px;border-radius:999px;background:#eef4ff;color:var(--blue);display:grid;place-items:center;font-weight:950;transition:transform .18s ease}
+.course-card.open .chev{transform:rotate(180deg)}
+.course-content{display:none;padding:0 14px 16px;border-top:1px solid var(--line)}
+.course-card.open .course-content{display:block}
+.goals{background:#f8fbff;border:1px solid var(--line);border-radius:var(--radius);padding:12px;margin:14px 0}
+.goals h4,.days h4{margin:0 0 8px;font-size:13px;color:var(--blue);text-transform:uppercase;letter-spacing:.04em}
+.goals ul{margin:0;padding-left:18px}
+.goals li{margin:6px 0;line-height:1.34;overflow-wrap:anywhere}
+.day{background:#fff;border:1px solid var(--line);border-radius:var(--radius);margin:9px 0;overflow:hidden}
+.day summary{cursor:pointer;padding:13px 12px;list-style:none;font-weight:950;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center}
+.day summary::-webkit-details-marker{display:none}
+.day summary span{overflow-wrap:anywhere}
+.day time{font-size:12px;color:var(--blue);white-space:nowrap}
+.day ul{margin:0;padding:0 14px 14px 28px}
+.day li{margin:7px 0;line-height:1.35;overflow-wrap:anywhere}
+.shared-card{padding:5px 10px}
+.shared-card .day{box-shadow:none}
+.section-note{margin:2px 2px 14px;color:var(--muted);font-size:13px;font-weight:700;text-align:center;line-height:1.35}
+.info-card{padding:16px}
+.info-card h3{margin:0 0 8px;font-size:21px;line-height:1.15;overflow-wrap:anywhere}
+.info-card p{margin:0 0 12px;line-height:1.45;color:#344054;overflow-wrap:anywhere}
+.yellow{background:var(--yellow)}
+.violet{background:var(--violet)}
+.buttons{display:grid;gap:9px}
+.buttons a,.people a{display:block;width:100%;text-align:center;text-decoration:none;border-radius:var(--radius);background:#fff;color:var(--ink);font-weight:950;padding:13px 10px;box-shadow:0 7px 18px rgba(0,0,0,.06);overflow-wrap:anywhere}
+.people{display:grid;gap:9px}
+.people span{display:block;margin-top:3px;color:var(--muted);font-weight:800}
+.info-card small{display:block;overflow-wrap:anywhere}
+.tools{text-align:center;color:var(--muted);font-size:13px;padding:8px 0 18px}
+.tools button{border:0;border-radius:var(--radius);background:var(--blue);color:white;padding:14px 18px;font:inherit;font-weight:950}
+.nav{position:fixed;left:50%;bottom:calc(10px + env(safe-area-inset-bottom));width:min(calc(100vw - 20px),calc(var(--mobile) - 20px));transform:translateX(-50%);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));background:rgba(255,255,255,.95);backdrop-filter:blur(14px);border:1px solid #dce6f3;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;z-index:10}
+.nav a{text-align:center;text-decoration:none;color:var(--ink);font-size:13px;font-weight:950;padding:14px 4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+@media(min-width:520px){body{border-left:1px solid var(--line);border-right:1px solid var(--line)}.flight-row{grid-template-columns:1fr 34px 1fr}.plane{display:grid;place-items:center;font-size:23px}.top{padding-left:24px;padding-right:24px}.app{padding:16px}}
+@media(max-width:340px){.logo{width:min(292px,88vw)}.app{padding:10px}.course-button{padding:14px 12px}.day summary{grid-template-columns:1fr}.day time{white-space:normal}.nav a{font-size:12px;padding-inline:2px}}

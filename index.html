@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1859b8" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Kalamata 2026" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Kalamata 2026</title>
+</head>
+<body>
+  <header class="top" id="start">
+    <img src="assets/logo.png?v=4" alt="Education without borders" class="logo" />
+    <h1>Kalamata 2026</h1>
+    <p>Mobilny informator uczestnika</p>
+  </header>
+
+  <main class="app">
+    <section class="flight-card" aria-label="Plan podróży">
+      <div class="flight-row">
+        <div><span>Wylot</span><strong>17.05.2026</strong><small>KAT 7:00 → ATH 10:30</small></div>
+        <div class="plane">✈</div>
+        <div><span>Powrót</span><strong>23.05.2026</strong><small>ATH 16:05 → KAT 17:35</small></div>
+      </div>
+    </section>
+
+    <section class="section" id="szkolenia">
+      <div class="section-head">
+        <span>Szkolenia</span>
+        <h2>Wybierz plan</h2>
+      </div>
+      <div class="course-list" id="courseList"></div>
+      <div class="common-schedule" id="commonSchedule"></div>
+      <p class="section-note">Posiłki nie są wliczone w opłatę za kurs.</p>
+    </section>
+
+    <section class="section" id="kontakt">
+      <div class="section-head"><span>Najważniejsze</span><h2>Kontakty</h2></div>
+      <article class="info-card yellow">
+        <h3>Hotel Flisvos</h3>
+        <p>135 Navarinou Street, Kalamata Beach<br>MINIOURAKOS SA, ΜΗΤΕ: 1249K012A0051500</p>
+        <div class="buttons">
+          <a href="https://www.google.com/maps/search/?api=1&query=Hotel%20Flisvos%20135%20Navarinou%20Street%20Kalamata%20Beach" target="_blank" rel="noopener">Otwórz w Google Maps</a>
+          <a href="tel:+302721082177">Zadzwoń do hotelu</a>
+          <a href="mailto:info@hotel-flisvos.gr">Napisz e-mail</a>
+        </div>
+      </article>
+      <article class="info-card">
+        <h3>Transfer lotniskowy</h3>
+        <p>Thanasis Arvanitis<br>Nr pojazdu: <strong>YTB 1760</strong></p>
+        <div class="buttons"><a href="tel:00306980422012">Zadzwoń: 0030 698 0422 012</a></div>
+      </article>
+      <article class="info-card">
+        <h3>Instytucja szkoleniowa</h3>
+        <div class="people">
+          <a href="tel:00306978692936"><b>Yanis</b><span>0030 697 86 92 93 6</span></a>
+          <a href="tel:00306977454907"><b>Tasos</b><span>0030 69 77 45 49 07</span></a>
+          <a href="tel:00306972865316"><b>Teo</b><span>0030 697 28 65 316</span></a>
+        </div>
+      </article>
+      <article class="info-card violet">
+        <h3>Ubezpieczenie WARTA</h3>
+        <p>Polisa nr <strong>920065357562</strong></p>
+        <div class="buttons"><a href="tel:+48502308308">Pomoc: +48 502 308 308</a></div>
+        <small>WARTATRAVEL.EAP.PL</small>
+      </article>
+    </section>
+
+    <section class="tools">
+      <button id="installBtn" hidden>Zainstaluj aplikację</button>
+      <p id="status">Aplikacja zapisuje się do trybu offline po pierwszym otwarciu.</p>
+    </section>
+  </main>
+
+  <nav class="nav" aria-label="Nawigacja">
+    <a href="#start">Start</a>
+    <a href="#szkolenia">Szkolenia</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+  <script src="app.js"></script>
+</body>
+</html>
