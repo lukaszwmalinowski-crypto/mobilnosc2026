@@ -52,18 +52,14 @@ a,button{font:inherit}
 .people{display:grid;gap:9px}
 .people span{display:block;margin-top:3px;color:var(--muted);font-weight:800}
 .info-card small{display:block;overflow-wrap:anywhere}
-.survey-card{position:relative;width:100%;margin:14px auto 12px;padding:18px 16px 20px;text-align:center;color:#fff;background:linear-gradient(135deg,#0d5eaf 0 34%,#fff 34% 43%,#0d5eaf 43% 64%,#8fc9ff 100%);border:1px solid rgba(255,255,255,.82);border-radius:var(--radius);box-shadow:0 0 0 1px rgba(13,94,175,.22) inset,0 14px 34px rgba(13,94,175,.24);overflow:hidden;isolation:isolate;animation:surveyGlow 2.2s ease-in-out infinite}
-.survey-card::before{content:"";position:absolute;inset:-45%;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.58) 48%,transparent 62%);transform:translateX(-38%);animation:surveyShine 3s ease-in-out infinite;z-index:-1}
+.survey-card{width:100%;margin:14px auto 12px;padding:18px 16px 20px;text-align:center;color:#fff;background:#0d5eaf;border:1px solid rgba(255,255,255,.72);border-radius:var(--radius);box-shadow:0 12px 28px rgba(13,94,175,.24)}
 .survey-card span{display:block;text-transform:uppercase;letter-spacing:.08em;font-size:12px;font-weight:950}
 .survey-card h2{margin:5px 0 6px;font-size:25px;line-height:1.1;letter-spacing:0}
 .survey-card p{margin:0 auto 14px;max-width:340px;font-weight:750;line-height:1.35}
-.survey-card a{display:block;width:100%;text-align:center;text-decoration:none;border-radius:var(--radius);background:#fff;color:#0d5eaf;font-weight:950;padding:14px 12px;box-shadow:0 8px 22px rgba(0,0,0,.16);overflow-wrap:anywhere}
+.survey-card a{display:block;width:100%;text-align:center;text-decoration:none;border-radius:var(--radius);background:#0d5eaf;color:#fff;border:1px solid rgba(255,255,255,.86);font-weight:950;padding:14px 12px;box-shadow:0 8px 18px rgba(0,0,0,.12);overflow-wrap:anywhere}
 .tools{text-align:center;color:var(--muted);font-size:13px;padding:8px 0 18px}
 .tools button{border:0;border-radius:var(--radius);background:var(--blue);color:white;padding:14px 18px;font:inherit;font-weight:950}
 .nav{position:fixed;left:50%;bottom:calc(10px + env(safe-area-inset-bottom));width:min(calc(100vw - 20px),calc(var(--mobile) - 20px));transform:translateX(-50%);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));background:rgba(255,255,255,.95);backdrop-filter:blur(14px);border:1px solid #dce6f3;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;z-index:10}
 .nav a{text-align:center;text-decoration:none;color:var(--ink);font-size:13px;font-weight:950;padding:14px 4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-@keyframes surveyGlow{0%,100%{box-shadow:0 0 0 1px rgba(13,94,175,.22) inset,0 14px 34px rgba(13,94,175,.24)}50%{box-shadow:0 0 0 1px rgba(255,255,255,.8) inset,0 18px 42px rgba(13,94,175,.38),0 0 28px rgba(143,201,255,.44)}}
-@keyframes surveyShine{0%,28%{transform:translateX(-42%)}58%,100%{transform:translateX(42%)}}
 @media(min-width:520px){body{border-left:1px solid var(--line);border-right:1px solid var(--line)}.flight-row{grid-template-columns:1fr 34px 1fr}.plane{display:grid;place-items:center;font-size:23px}.top{padding-left:24px;padding-right:24px}.app{padding:16px}}
 @media(max-width:340px){.logo{width:min(292px,88vw)}.app{padding:10px}.course-button{padding:14px 12px}.day summary{grid-template-columns:1fr}.day time{white-space:normal}.nav a{font-size:12px;padding-inline:2px}}
-@media(prefers-reduced-motion:reduce){.survey-card,.survey-card::before{animation:none}}
